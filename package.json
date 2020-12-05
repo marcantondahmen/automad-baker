@@ -11,6 +11,7 @@
     "gulp-autoprefixer": "^7.0.1",
     "gulp-clean-css": "^3.7.0",
     "gulp-concat": "^2.6.1",
+    "gulp-header": "^2.0.9",
     "gulp-less": "^3.3.2",
     "gulp-rename": "^1.2.2",
     "gulp-uglify-es": "^2.0.0",
