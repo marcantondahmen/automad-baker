@@ -97,7 +97,6 @@ gulp.task('libs-js', function() {
 					'../../../lib/vendor/uikit/uikit/src/js/core/tab.js',
 					'../../../lib/vendor/uikit/uikit/src/js/core/cover.js',
 					// Selected components.
-					'../../../lib/vendor/uikit/uikit/src/js/components/slideshow.js',
 					'../../../lib/vendor/uikit/uikit/src/js/components/autocomplete.js',
 					'../../../lib/vendor/uikit/uikit/src/js/components/pagination.js',
 					'../../../lib/vendor/uikit/uikit/src/js/components/sticky.js'

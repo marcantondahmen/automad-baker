@@ -1,0 +1,16 @@
+{
+	"name": "Baker",
+	"description": "An elegant documentation and blogging theme",
+	"author": "Marc Anton Dahmen",
+	"version": "1.0.0",
+	"license": "MIT",
+	"masks": {
+		"page": [],
+		"shared": [
+			"checkboxShowInFooter",
+			"icon",
+			"metaDescription",
+			"metaTitle"
+		]
+	}
+}
