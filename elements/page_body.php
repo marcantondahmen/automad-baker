@@ -3,7 +3,7 @@
 <h1>@{ title }</h1>
 <@ tags.php @>
 <@ if not @{ checkboxHideDate } @>
-	<p class="uk-text-small">@{ date | dateFormat (@{ formatDate | def ('l, F jS Y')}, @{ locale }) }</p>
+	<p class="uk-text-muted">@{ date | dateFormat (@{ formatDate | def ('l, F jS Y')}, @{ locale }) }</p>
 <@ end @>
 <# Content. #>
 <div class="docs-content uk-margin-small-top">
@@ -33,10 +33,8 @@
 	} @>
 	<@ if @{ :pagelistCount } @>
 		<hr />
-		<h2 class="uk-margin-top uk-margin-bottom">Related</h2>
-	<@ end @>
-	<@ foreach in pagelist @>
-		<@ preview.php @>
+		<h2 class="uk-margin-top">Related</h2>
+		<@ ../blocks/pagelist/simple.php @>
 	<@ end @>
 <@ end @>
 <@ footer_nav.php @>
