@@ -1,6 +1,6 @@
 {
 	"name": "dahmen/automad-baker",
-	"description": "An elegant documentation and blogging theme for Automad",
+	"description": "An elegant documentation and blogging theme for Automad based on the official Automad documentation theme",
 	"type": "automad-package",
 	"keywords": [
 		"theme",
