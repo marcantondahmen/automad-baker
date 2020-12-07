@@ -28,9 +28,15 @@
 		sort: ':path asc'
 	} @>
 	<@ if @{ :pagelistCount } @>
-		<hr />
-		<h2 class="uk-margin-top">Related</h2>
-		<@ ../blocks/pagelist/simple.php @>
+		<div class="docs-content">
+			<@ if not @{ checkboxSimpleRelatedPageList } @>
+				<@ masonry_config.php @>
+				<@ ../blocks/pagelist/masonry.php @>
+			<@ else @>
+				<hr>
+				<@ ../blocks/pagelist/simple.php @>
+			<@ end @>
+		</div>
 	<@ end @>
 <@ end @>
 <@ footer_nav.php @>
