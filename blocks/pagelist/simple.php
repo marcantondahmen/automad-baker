@@ -24,6 +24,6 @@
 			@{ +main | findFirstParagraph | 300 }
 		</a>
 	<@ else @>
-		<blockquote>Nothing found!</blockquote>
+		<blockquote>@{ notificationNoSearchResults | def('Nothing found!') }</blockquote>
 	<@ end @>
 </div>
