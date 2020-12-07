@@ -3,7 +3,7 @@
 <@ newPagelist { 
 	filter: @{ ?filter }, 
 	search: @{ ?search },
-	sort: @{ pagelistSort | def(':basename asc') },
+	sort: @{ sortPagelist | def(':basename asc') },
 	limit: 8,
 	page: @{ ?page | def(1) }
 } @>
