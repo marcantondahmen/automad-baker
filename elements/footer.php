@@ -7,5 +7,7 @@
 		<@ nav.php @>
 	</div>
 	
+	@{ itemsFooter }
+
 </body>
 </html>

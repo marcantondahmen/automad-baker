@@ -32,7 +32,7 @@
 	<script>
 		var autocomplete = <@ autocomplete.php @>;
 	</script>
-	@{ header }
+	@{ itemsHeader }
 </head>
 
 <body>

@@ -29,7 +29,7 @@
 	} @>
 	<@ if @{ :pagelistCount } @>
 		<div class="docs-content">
-			<@ if not @{ checkboxSimpleRelatedPageList } @>
+			<@ if not @{ checkboxSimpleRelatedPagelist } @>
 				<@ masonry_config.php @>
 				<@ ../blocks/pagelist/masonry.php @>
 			<@ else @>
