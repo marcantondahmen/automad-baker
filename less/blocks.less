@@ -10,13 +10,36 @@
  */
 
 
+@block-max-width: 52rem;
+
 .uk-width-1-1:not(.uk-width-large-3-4) {
 
 	& > :not(.docs-content):not(nav):not(.docs-sidebar),
 	& > .docs-content > :not(.am-stretched) {
-		max-width: 45rem;
+		max-width: @block-max-width;
 		margin-left: auto;	
 		margin-right: auto;
 	}
 
+}
+
+.am-stretched {
+
+	width: ~"calc(100% + (2 * @{grid-gutter-horizontal}))" !important;
+	min-width: ~"calc(100% + (2 * @{grid-gutter-horizontal}))" !important;
+	max-width: ~"calc(100% + (2 * @{grid-gutter-horizontal}))" !important;
+	margin: @utility-margin -@grid-gutter-horizontal;
+
+	& figcaption {
+		padding: @utility-margin-small @grid-gutter-horizontal 0 @grid-gutter-horizontal;
+	}
+
+	& img {
+		min-width: 100%;
+	}
+
+}
+
+figcaption {
+	padding-top: @utility-margin-small;
 }

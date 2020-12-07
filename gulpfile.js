@@ -16,6 +16,7 @@ var gulp = require('gulp'),
 	header = require('gulp-header'),
 	merge2 = require('merge2'),
 	less = require('gulp-less'),
+	remoteSrc = require('gulp-remote-src'),
 	rename = require('gulp-rename'),
 	uglify = require('gulp-uglify-es').default,
 	gutil = require('gulp-util'),
@@ -71,7 +72,8 @@ gulp.task('libs-js', function() {
 	return 	merge2(
 				// jQuery first.
 				gulp.src([
-					'node_modules/jquery/dist/jquery.min.js'
+					'node_modules/jquery/dist/jquery.min.js',
+					'node_modules/imagesloaded/imagesloaded.pkgd.min.js'
 				]),
 				// Scrollbars.
 				gulp.src([
@@ -103,7 +105,13 @@ gulp.task('libs-js', function() {
 				])
 				.pipe(uglify(uglifyOptions))
 				.pipe(concat('uikit.js', { newLine: '\r\n\r\n' } )) // Doesn't get saved to disk.
-				.pipe(header('/*! <%= pkg.title %> <%= pkg.version %> | <%= pkg.homepage %> | (c) 2014 YOOtheme | MIT License */\n', { 'pkg' : pkgUIkit } ))
+				.pipe(header('/*! <%= pkg.title %> <%= pkg.version %> | <%= pkg.homepage %> | (c) 2014 YOOtheme | MIT License */\n', { 'pkg' : pkgUIkit } )),
+				remoteSrc([
+					'packages/standard/js/masonry.js'
+				], {
+					base: 'https://raw.githubusercontent.com/marcantondahmen/automad/1.6.4/'
+				})
+			.pipe(uglify(uglifyOptions))
 			)
 			.pipe(concat('libs.min.js', { newLine: '\r\n\r\n' } ))
 			.pipe(gulp.dest('dist'));

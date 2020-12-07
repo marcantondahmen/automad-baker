@@ -1,0 +1,91 @@
+/*
+ *	Baker
+ *
+ *	Copyright (c) 2020 by Marc Anton Dahmen
+ *	http://marcdahmen.de
+ *
+ *  MIT license
+ *
+ *  based on UIkit 2
+ */
+
+
+@card-width: 30rem;
+@cards-gap: 0;
+@cards-column-gap: @cards-gap;
+@cards-row-gap: @cards-gap;
+@cards-masonry-auto-rows: 50px;
+
+.cards {
+
+	display: grid;
+	column-gap: @cards-column-gap;
+	row-gap: @cards-row-gap;
+	grid-template-columns: repeat(auto-fill, minmax(@card-width, 1fr));
+	position: relative;
+	margin: (@utility-margin + 0.75rem) -@grid-gutter-horizontal;
+	overflow: hidden;
+	border-bottom: @am-hairline;
+	
+	@media (max-width: (@card-width * 1.75)) {
+		grid-template-columns: 1fr;
+	}
+
+	&:last-child {
+		margin-bottom: -(@utility-margin + @am-border-width);
+	}
+
+	&.masonry {
+		grid-auto-rows: @cards-masonry-auto-rows;
+	}
+
+	& .card {
+
+		overflow: hidden;
+		border-top: @am-hairline;
+		border-left: @am-hairline;
+		margin-left: -@am-border-width;
+		padding: @grid-gutter-vertical @grid-gutter-horizontal;
+
+		& img,
+		& .am-stretched {
+			margin-top: 0.2rem;
+		}
+
+		& .am-stretched {
+			margin-left: -(@grid-gutter-horizontal + @am-border-width);
+		}
+
+		& .panel-body {
+			padding: @base-margin-vertical 0;
+		}
+
+		&-more {
+			display: inline-block;
+			border: none;
+			font-weight: 400;
+			font-size: 1.2rem !important;
+		}
+
+	}
+
+	&.grid,
+	&.masonry-clean-bottom {
+
+		& .card-content {
+		
+			display: flex;
+			box-sizing: border-box;
+			flex-direction: column;
+			justify-content: flex-start;
+			height: 100%;
+
+			& > .panel-body {
+				flex-grow: 1;
+			}
+		
+		}
+
+	}
+
+}

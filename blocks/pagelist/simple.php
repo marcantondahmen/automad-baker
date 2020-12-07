@@ -23,5 +23,7 @@
 			</h3>	
 			@{ +main | findFirstParagraph | 300 }
 		</a>
+	<@ else @>
+		<blockquote>Nothing found!</blockquote>
 	<@ end @>
 </div>
