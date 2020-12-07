@@ -15,7 +15,7 @@
 			title="" 
 			name="search" 
 			type="search" 
-			placeholder="Search" 
+			placeholder="@{ placeholderSearch | def('Search') }" 
 			required
 			/>
 		</div>
