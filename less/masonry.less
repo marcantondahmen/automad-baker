@@ -23,9 +23,11 @@
 	row-gap: @cards-row-gap;
 	grid-template-columns: repeat(auto-fill, minmax(@card-width, 1fr));
 	position: relative;
+	z-index: 10;
 	margin: (@utility-margin + 0.75rem) -@grid-gutter-horizontal;
 	overflow: hidden;
 	border-bottom: @am-hairline;
+	background-color: @am-bg;
 	
 	@media (max-width: (@card-width * 1.75)) {
 		grid-template-columns: 1fr;
