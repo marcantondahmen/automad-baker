@@ -1,9 +1,6 @@
 <?php defined('AUTOMAD') or die('Direct access not permitted!'); ?>
 		
-		<div class="docs-footer">
-			<@ if @{ :template } != 'home' @>
-				<hr />	
-			<@ end @>	
+		<div class="docs-footer">	
 			<# Breadcrumbs. #>
 			<@ breadcrumbs.php @>
 			<div class="uk-margin-bottom uk-margin-top">

@@ -1,7 +1,7 @@
 <?php defined('AUTOMAD') or die('Direct access not permitted!'); ?>
 
 	<@ if @{ :paginationCount } > 1 @>
-		<div class="uk-margin-large-top">
+		<div class="uk-margin-top uk-margin-bottom">
 			<@ if @{ ?page | def(1) } > 1 @>
 				<ul class="uk-pagination uk-display-inline-block">
 					<li>

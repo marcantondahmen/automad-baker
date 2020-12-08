@@ -1,12 +1,27 @@
 <?php defined('AUTOMAD') or die('Direct access not permitted!'); ?>
-<# Configure pagelist. #>
-<@ newPagelist { 
-	filter: @{ ?filter }, 
-	search: @{ ?search },
-	sort: @{ sortPagelist | def(':basename asc') },
-	limit: 8,
+
+<@~ newPagelist { 
+	type: 'children', 
+	context: @{ showPagesBelow },
+	filter: @{ ?filter },
+	match: '{"url": "#@{ filterPagelistByUrl }#"}',
+	sort: @{ ?sort | def (@{ sortPagelist }) | def('date desc') },
+	limit: @{ itemsPerPage | def(8) },
 	page: @{ ?page | def(1) }
-} @>
+} ~@>
+
+<@ if @{ checkboxShowAllPagesInPagelist } @>
+	<@~ pagelist { type: false } ~@>
+<@ end @>
+
+<@~ if @{ ?search } ~@>
+	<@ pagelist { 
+		type: false,
+		match: false, 
+		search: @{ ?search }
+	} @>
+<@~ end ~@>
+
 <div class="docs-buttons-stacked uk-margin-top-remove uk-margin-bottom">
 	<# Filter button. #>
 	<div class="uk-button-dropdown" data-uk-dropdown="{mode:'click'}">
@@ -51,6 +66,7 @@
 	<@ ../blocks/pagelist/masonry.php @>
 <@ else @>
 	<@ ../blocks/pagelist/simple.php @>
+	<hr>
 <@ end @>
 <@ pagination.php @>
 <@ footer_nav.php @>

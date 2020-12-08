@@ -35,8 +35,13 @@
 			<@ else @>
 				<hr>
 				<@ ../blocks/pagelist/simple.php @>
+				<hr>
 			<@ end @>
 		</div>
+	<@ else @>
+		<hr>
 	<@ end @>
+<@ else @>
+	<hr>
 <@ end @>
 <@ footer_nav.php @>

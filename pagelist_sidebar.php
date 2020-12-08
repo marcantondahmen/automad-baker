@@ -1,18 +1,18 @@
 <?php defined('AUTOMAD') or die('Direct access not permitted!'); ?>
 <@ elements/header.php @>
 
-		<@ set { 
-			:pagelistGrid: false
-		} @>
-
 		<ul class="uk-grid">
 			<@ elements/sidebar.php @>
 			<li class="uk-width-1-1 uk-width-large-3-4 docs-navbar-push">
-				<@ if @{ ?search } or @{ ?filter } @>
-					<@ elements/search_results.php @>
-				<@ else @>
-					<@ elements/page_body.php @>
-				<@ end @>
+				<@ elements/navbar.php @>
+				<@ elements/title.php @>
+				<div class="docs-content uk-margin-small-top">
+					@{ +main }
+					<@ set { 
+						:pagelistGrid: false
+					} @>
+					<@ elements/pagelist.php @>
+				</div>
 			</li>
 		</ul>
 
