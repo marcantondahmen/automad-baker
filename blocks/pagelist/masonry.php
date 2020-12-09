@@ -54,8 +54,6 @@
 		<@~ end @>
 	</div>
 <@ else @>
-	<figure>
-		<blockquote>@{ notificationNoSearchResults | def('Nothing found!') }</blockquote>
-	</figure>
+	<h3>@{ notificationNoSearchResults | def('Nothing found.') }</h3>
 	<hr>
 <@ end @>
