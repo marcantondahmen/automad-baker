@@ -3,6 +3,7 @@
 <@~ newPagelist { 
 	type: 'children', 
 	context: @{ showPagesBelow },
+	excludeCurrent: true,
 	filter: @{ ?filter },
 	match: '{"url": "#@{ filterPagelistByUrl }#"}',
 	sort: @{ ?sort | def (@{ sortPagelist }) | def('date desc') },
