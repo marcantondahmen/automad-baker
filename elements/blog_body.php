@@ -3,6 +3,6 @@
 <@ navbar.php @>
 <@ title.php @>
 <div class="docs-content uk-margin-small-top">
-	@{ +main }	
+	@{ +main }
 	<@ pagelist.php @>
 </div>

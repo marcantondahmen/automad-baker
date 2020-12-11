@@ -3,6 +3,10 @@
 
 		<ul class="uk-grid" data-docs-scrolled>
 			<li class="uk-width-1-1 docs-navbar-push">
+				<@ set { :gridSize: 'large' } @>
+				<@ if @{ checkboxSmallPagelistGrid } @>
+					<@ set { :gridSize: 'small' } @>
+				<@ end @>
 				<@ elements/post_body.php @>
 			</li>
 		</ul>

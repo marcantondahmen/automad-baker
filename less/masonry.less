@@ -11,10 +11,12 @@
 
 
 @card-width: 30rem;
+@card-width-small: 24rem;
 @cards-gap: 0;
 @cards-column-gap: @cards-gap;
 @cards-row-gap: @cards-gap;
 @cards-masonry-auto-rows: 50px;
+@cards-margin-vertical: @utility-margin + 0.75rem;
 
 .cards {
 
@@ -24,7 +26,7 @@
 	grid-template-columns: repeat(auto-fill, minmax(@card-width, 1fr));
 	position: relative;
 	z-index: 10;
-	margin: (@utility-margin + 0.75rem) -@grid-gutter-horizontal;
+	margin: @cards-margin-vertical -@grid-gutter-horizontal;
 	overflow: hidden;
 	border-bottom: @am-hairline;
 	background-color: @am-bg;
@@ -35,6 +37,14 @@
 
 	&.masonry {
 		grid-auto-rows: @cards-masonry-auto-rows;
+	}
+
+	& + & {
+		margin-top: -@cards-margin-vertical - @am-border-width;
+	}
+
+	&.small:not(.single) {
+		grid-template-columns: repeat(auto-fill, minmax(@card-width-small, 1fr));
 	}
 
 	& .card {

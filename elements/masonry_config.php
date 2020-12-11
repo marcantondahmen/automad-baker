@@ -2,7 +2,7 @@
 <@ set { 
 	:pagelistGrid: true,
 	:hideThumbnails: @{ checkboxHideThumbnails },
-	:teaserClass: false
+	:teaserClass: 'not-stretched'
 } @>
 <@ if @{ checkboxStretchThumbnails } @>
 	<@ set { 

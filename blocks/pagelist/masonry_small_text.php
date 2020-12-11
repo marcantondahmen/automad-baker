@@ -2,7 +2,7 @@
 <@ ../../elements/masonry_block_cache.php @>
 <@ set { 
 	:hideThumbnails: true,
-	:gridSize: 'large'
+	:gridSize: 'small'
 } @>
 <@ ../../elements/masonry.php @>
 <@ ../../elements/masonry_block_reset.php @>

@@ -10,8 +10,11 @@
 			"imageAppleTouchIcon",
 			"imageFavicon",
 			"imageLogo",
+			"labelShowAll",
+			"locale",
 			"logoHeight",
 			"notificationNoSearchResults",
+			"placeholderSearch",
 			"urlFacebook",
 			"urlGithub",
 			"urlInstagram",
@@ -24,7 +27,7 @@
 			"checkboxShowInNavbar",
 			"metaDescription",
 			"metaTitle",
-			"labelShowAll"
+			"urlContextForPagelist"
 		]
 	},
 	"tooltips": {
@@ -33,9 +36,11 @@
 		"checkboxHideDate": "Hide the date",
 		"checkboxHideRelatedPages": "Hide related pages at the bottom of the page",
 		"checkboxHideThumbnails": "Hide thumbnails within a masonry page grid",
+		"checkboxShowAllPagesInPagelist": "Show not only children but all pages in the pagelist",
 		"checkboxShowInFooter": "Show a link to this page in the footer",
 		"checkboxShowInNavbar": "Show a link to this page in the navbar",
 		"checkboxSimpleRelatedPagelist": "Use a simplified layout for the related pages list",
+		"checkboxSmallPagelistGrid": "Use a 3-column grid for pagelists in full width templates",
 		"checkboxStretchThumbnails": "Stretch images in pagelists to the full width",
 		"filterPagelistByUrl": "Filters the pagelist by URLs matching a given regular expression like for example '(/portfolio|/blog)'",
 		"formatDate": "The format for displaying the date of a page &mdash; you can find more information about date formats <a href=\"https://www.php.net/manual/en/datetime.format.php\">here</a>",
@@ -54,7 +59,7 @@
 		"notificationNoSearchResults": "Notification text for an empty list of search results",
 		"ogImage": "A glob pattern to select a preview image for Twitter, Facebook or similar social network cards. This could be for example `*.png, *.jpg`",
 		"placeholderSearch": "Placeholder text for the search field of the main menu",
-		"showPagesBelow": "Define an alternative URL to be used as the pagelist's parent page, instead of the current one",
+		"urlContextForPagelist": "Define an alternative URL to be used as the pagelist's parent page, instead of the current one",
 		"sortPagelist": "Sorting of the pages in a blog pagelist. Note that the sorting and filtering buttons should be hidden in case this variable is defined! The default is 'date desc'. You can choose any other page variable in combination with an order (asc or desc) like ':path asc'",
 		"urlFacebook": "If an URL to a Facebook page is given, a Facebook icon is added to the navbar",
 		"urlGithub": "If an URL to a GitHub page is given, a GitHub icon is added to the navbar",

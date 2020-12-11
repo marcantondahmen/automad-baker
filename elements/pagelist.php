@@ -2,7 +2,7 @@
 
 <@~ newPagelist { 
 	type: 'children', 
-	context: @{ showPagesBelow },
+	context: @{ urlContextForPagelist },
 	excludeCurrent: true,
 	filter: @{ ?filter },
 	match: '{"url": "#@{ filterPagelistByUrl }#"}',
@@ -64,7 +64,7 @@
 	<@ end @>
 </div>
 <@ if @{ :pagelistGrid } @>
-	<@ ../blocks/pagelist/masonry.php @>
+	<@ masonry.php @>
 <@ else @>
 	<@ ../blocks/pagelist/simple.php @>
 	<hr>
