@@ -67,7 +67,6 @@
 	<@ masonry.php @>
 <@ else @>
 	<@ ../blocks/pagelist/simple.php @>
-	<hr>
 <@ end @>
 <@ pagination.php @>
 <@ footer_nav.php @>
