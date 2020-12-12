@@ -2,5 +2,5 @@
 <h1>@{ title }</h1>
 <@ tags.php @>
 <@ if not @{ checkboxHideDate } and @{ date } @>
-	<p>@{ date | dateFormat (@{ formatDate | def ('l, F jS Y')}, @{ locale }) }</p>
+	<div class="uk-margin-small-bottom">@{ date | dateFormat (@{ formatDate | def ('l, F jS Y')}, @{ locale }) }</div>
 <@ end @>
