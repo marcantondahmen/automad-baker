@@ -16,13 +16,13 @@
 						} @>
 					<@ end @>
 					<@ if @{ :date } or @{ tags } @>
-						<p class="uk-margin-remove">
+						<div>
 							@{ :date }
 							<@ if @{ :date } and @{ tags } @>
 								&mdash;
 							<@ end @>
 							@{ tags }
-						</p>
+						</div>
 					<@ end @>
 					<div class="panel-body">
 						<@ if not @{ :hideThumbnails } @>
