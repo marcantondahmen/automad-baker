@@ -32,9 +32,11 @@
 		<ul class="docs-nav docs-nav-top docs-nav-large">
 			<@ newPagelist { type: 'children' } @>
 			<@ with '/' @>
-				<li>
-					<@ link @>
-				</li>
+				<@ if not @{ hidden } @>
+					<li>
+						<@ link @>
+					</li>	
+				<@ end @>
 				<@ foreach in pagelist @>		
 					<li>
 						<@ link @>
