@@ -82,9 +82,9 @@ You can add social icons linking to your profiles in navbar by providing profile
 | `Show In Footer` | Show a link to this page in the footer | Page | 
 | `Show In Navbar` | Show a link to this page in the navbar | Page | 
 | `Simple Related Pagelist` | Use a simplified layout for the related pages list | All |
-| `checkboxSmallPagelistGrid` | Use a 3-column grid for pagelists in full width templates | All | 
+| `Small Pagelist Grid` | Use a 3-column grid for pagelists in full width templates | All | 
 | `Stretch Thumbnails` | Stretch images in pagelists to the full width | All | 
-| `Filter Pagelist By Url` | Filters the pagelist by URLs matching a given regular expression like for example '(/portfolio|/blog)' | All | 
+| `Filter Pagelist By Url` | Filters the pagelist by URLs matching a given regular expression like for example '(portfolio\|blog)' | All | 
 | `Format Date` | The format for displaying the date of a page &mdash; you can find more information about date formats [here](https://www.php.net/manual/en/datetime.format.php) | Shared | 
 | `Image Apple Touch Icon` | The file to be used as Apple touch icon | Shared | 
 | `Image Favicon` | The file to be used as favicon | Shared | 
