@@ -47,6 +47,10 @@
 		grid-template-columns: repeat(auto-fill, minmax(@card-width-small, 1fr));
 	}
 
+	&.single {
+		grid-template-columns: 1fr !important;
+	}
+
 	& .card {
 
 		overflow: hidden;
@@ -54,10 +58,6 @@
 		border-left: @am-hairline;
 		margin-left: -@am-border-width;
 		padding: @grid-gutter-vertical @grid-gutter-horizontal;
-
-		.single& {
-			padding: @grid-gutter-vertical 0;
-		} 
 
 		& h2 {
 
