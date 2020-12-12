@@ -2,6 +2,8 @@
 
 An elegant documentation and blogging theme for [Automad](https://automad.org) based on the official Automad documentation theme.
 
+![](https://raw.githubusercontent.com/marcantondahmen/media-files/master/themes/baker/post-sidebar-masonry.png)
+
 - [Templates](#templates)
 - [Pagelists](#pagelists)
 - [Search and Filter](#search-and-filter)
