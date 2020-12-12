@@ -2,7 +2,7 @@
 <@ masonry_config.php @>
 <@ navbar.php @>
 <@ title.php @>
-<div class="docs-content uk-margin-small-top">
+<div class="docs-content">
 	@{ +main }
 	<@ pagelist.php @>
 </div>

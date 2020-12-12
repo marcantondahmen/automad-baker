@@ -32,6 +32,7 @@ An elegant documentation and blogging theme for [Automad](https://automad.org) b
 | `Hide Date` | Hide the date | All | 
 | `Hide Related Pages` | Hide related pages at the bottom of the Shared | All | 
 | `Hide Thumbnails` | Hide thumbnails within a masonry page grid | All | 
+| `Hide Title` | Hide the page title and tags | Page |
 | `Show All Pages In Pagelist` | Show not only children but all pages in the pagelist | All | 
 | `Show In Footer` | Show a link to this page in the footer | Page | 
 | `Show In Navbar` | Show a link to this page in the navbar | Page | 

@@ -2,7 +2,7 @@
 <@ navbar.php @>
 <@ title.php @>
 <# Content. #>
-<div class="docs-content uk-margin-small-top">
+<div class="docs-content">
 	@{ +main }	
 </div>
 <# Children nav for small devices. #>

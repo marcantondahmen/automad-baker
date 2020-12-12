@@ -25,6 +25,7 @@
 			"+main",
 			"checkboxShowInFooter",
 			"checkboxShowInNavbar",
+			"checkboxHideTitle",
 			"metaDescription",
 			"metaTitle",
 			"urlContextForPagelist"
@@ -36,6 +37,7 @@
 		"checkboxHideDate": "Hide the date",
 		"checkboxHideRelatedPages": "Hide related pages at the bottom of the page",
 		"checkboxHideThumbnails": "Hide thumbnails within a masonry page grid",
+		"checkboxHideTitle": "Hide the page title and tags",
 		"checkboxShowAllPagesInPagelist": "Show not only children but all pages in the pagelist",
 		"checkboxShowInFooter": "Show a link to this page in the footer",
 		"checkboxShowInNavbar": "Show a link to this page in the navbar",
