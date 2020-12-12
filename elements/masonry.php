@@ -45,7 +45,7 @@
 							<@~ end ~@>
 						<@ end @>
 						<p>
-							@{ +main | findFirstParagraph | 300 }
+							@{ +main | findFirstParagraph }
 						</p>
 					</div>
 					<a href="@{ url }" class="card-more"></a>
