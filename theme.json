@@ -35,6 +35,7 @@
 		"+main": "The main content of the page",
 		"brand": "In case there is no logo defined, this field can be used for any kind of markup like HTML or SVG to serve as the brand of the site",
 		"checkboxHideDate": "Hide the date",
+		"checkboxHideFilters": "Hide the filter dropdown menu",
 		"checkboxHideRelatedPages": "Hide related pages at the bottom of the page",
 		"checkboxHideThumbnails": "Hide thumbnails within a masonry page grid",
 		"checkboxHideTitle": "Hide the page title and tags",
