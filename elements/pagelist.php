@@ -23,6 +23,8 @@
 	} @>
 <@~ end ~@>
 
+<@ search_results.php @>
+
 <@ if not @{ checkboxHideFilters } or @{ ?search } @>
 	<div class="docs-buttons-stacked uk-margin-top-remove uk-margin-bottom">
 		<@ filters.php @>
