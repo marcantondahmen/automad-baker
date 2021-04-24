@@ -8,9 +8,9 @@
  */
 
 
-+function(docs, $) {
++function(baker, $) {
 	
-	docs.navbar = {
+	baker.navbar = {
 		
 		init: function() {
 			
@@ -35,6 +35,6 @@
 		
 	}
 		
-	$(document).on('ready', docs.navbar.init);
+	$(document).on('ready', baker.navbar.init);
 
-}(window.docs = window.docs || {}, jQuery);
+}(window.baker = window.baker || {}, jQuery);

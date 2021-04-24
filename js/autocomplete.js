@@ -8,9 +8,9 @@
  */
 
 
-+function(docs, $, UIkit) {
++function(baker, $, UIkit) {
 		
-	docs.autocomplete = {
+	baker.autocomplete = {
 
 		selectors: {
 			submit: '[data-baker-autocomplete-submit]'
@@ -33,16 +33,16 @@
 	}
 
 	// Submit autocomplete form on hitting the return key.
-	$(document).on('keydown', docs.autocomplete.selectors.submit + ' .uk-autocomplete input[type="search"]', function (e) {
+	$(document).on('keydown', baker.autocomplete.selectors.submit + ' .uk-autocomplete input[type="search"]', function (e) {
 
 		if (e.which == 13) {
-			docs.autocomplete.submitForm(e);
+			baker.autocomplete.submitForm(e);
 		}
 
 	});
 
 	// Submit form when selecting an autocomplete value (navbar only).
-	$(document).on('click', docs.autocomplete.selectors.submit + ' .uk-dropdown a', docs.autocomplete.submitForm);
+	$(document).on('click', baker.autocomplete.selectors.submit + ' .uk-dropdown a', baker.autocomplete.submitForm);
 
 	// UIkit options.
 	UIkit.on('beforeready.uk.dom', function(){
@@ -52,4 +52,4 @@
 		});
 	});
 
-}(window.docs = window.docs || {}, jQuery, UIkit);
+}(window.baker = window.baker || {}, jQuery, UIkit);

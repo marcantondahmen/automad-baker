@@ -8,9 +8,9 @@
  */
 
 
-+function(docs, $) {
++function(baker, $) {
 	
-	docs.links = {
+	baker.links = {
 		
 		external: function() {
 			$('a[href^="http"]').not('a[href$=".zip"]').attr('target', '_blank');
@@ -18,6 +18,6 @@
 		
 	}
 		
-	$(document).on('ready', docs.links.external);
+	$(document).on('ready', baker.links.external);
 
-}(window.docs = window.docs || {}, jQuery);
+}(window.baker = window.baker || {}, jQuery);

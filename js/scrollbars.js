@@ -8,9 +8,9 @@
  */
 
 
-+function(docs, $) {
++function(baker, $) {
 	
-	docs.scrollbars = {
+	baker.scrollbars = {
 		
 		init: function() {
 			
@@ -46,6 +46,6 @@
 		
 	}
 		
-	$(document).on('ready', docs.scrollbars.init);
+	$(document).on('ready', baker.scrollbars.init);
 
-}(window.docs = window.docs || {}, jQuery);
+}(window.baker = window.baker || {}, jQuery);

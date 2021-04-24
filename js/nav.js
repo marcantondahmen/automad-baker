@@ -8,9 +8,9 @@
  */
 
 
-+function(docs, $) {
++function(baker, $) {
 	
-	docs.nav = {
+	baker.nav = {
 		
 		init: function() {
 			
@@ -35,10 +35,10 @@
 				
 				var	$arrow = $(this),
 					$container = $arrow.closest('[data-baker-nav]'),
-					current = $container.data('docsNav'),
+					current = $container.data('bakerNav'),
 					regex = new RegExp(current + "(#[^#]*)?$", 'i'),
 					baseUrl = window.location.pathname.replace(regex, ''),
-					target = $(this).data('docsNavTarget');
+					target = $(this).data('bakerNavTarget');
 					
 				e.preventDefault();
 				
@@ -76,6 +76,6 @@
 		
 	};
 	
-	docs.nav.init();
+	baker.nav.init();
 
-}(window.docs = window.docs || {}, jQuery);
+}(window.baker = window.baker || {}, jQuery);

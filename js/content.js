@@ -8,9 +8,9 @@
  */
 
 
-+function(docs, $) {
++function(baker, $) {
 	
-	docs.content = {
+	baker.content = {
 		
 		anchors: function() {
 			
@@ -27,6 +27,6 @@
 		
 	}
 		
-	$(document).on('ready', docs.content.anchors);
+	$(document).on('ready', baker.content.anchors);
 
-}(window.docs = window.docs || {}, jQuery);
+}(window.baker = window.baker || {}, jQuery);

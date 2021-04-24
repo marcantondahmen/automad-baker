@@ -8,15 +8,15 @@
  */
 
 
-+function(docs, $) {
++function(baker, $) {
 	
-	docs.pagination = {
+	baker.pagination = {
 		
 		init: function() {
 			
 			$('[data-uk-pagination]').on('select.uk.pagination', function(e, index) {
 				e.preventDefault();
-				docs.pagination.update(index);
+				baker.pagination.update(index);
 			});	
 			
 		},
@@ -39,6 +39,6 @@
 		
 	};
 	
-	$(document).on('ready', docs.pagination.init);
+	$(document).on('ready', baker.pagination.init);
 
-}(window.docs = window.docs || {}, jQuery);
+}(window.baker = window.baker || {}, jQuery);
