@@ -2,7 +2,7 @@
 <@ ../../elements/masonry_block_cache.php @>
 <@ set { 
 	:hideThumbnails: false,
-	:teaserClass: 'am-stretched',
+	:teaserClass: 'full-width',
 	:gridSize: 'small'
 } @>
 <@ ../../elements/masonry.php @>

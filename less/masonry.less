@@ -47,10 +47,6 @@
 		grid-template-columns: repeat(auto-fill, minmax(@card-width-small, 1fr));
 	}
 
-	&.single {
-		grid-template-columns: 1fr !important;
-	}
-
 	& .card {
 
 		overflow: hidden;
@@ -68,12 +64,8 @@
 		}
 
 		& img,
-		& .am-stretched {
+		& .full-width {
 			margin-top: 0.2rem;
-		}
-
-		& .am-stretched {
-			margin-left: -(@grid-gutter-horizontal + @am-border-width);
 		}
 
 		& .panel-body {
