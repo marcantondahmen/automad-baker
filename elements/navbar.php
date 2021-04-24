@@ -5,7 +5,7 @@
 			<li class="baker-navbar-brand<@ if @{ :template | match('/sidebar/') } @> uk-hidden-large<@ end @>">
 				<@ logo.php @>
 			</li>
-			<li>
+			<li class="uk-hidden-small">
 				<div class="baker-navbar-items">
 					<# 
 					Expose variable to dashboard
