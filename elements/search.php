@@ -1,5 +1,5 @@
 <?php defined('AUTOMAD') or die('Direct access not permitted!'); ?>
-
+<@ if @{ urlSearchResults } @>
 	<form 
 	class="baker-search uk-form" 
 	action="@{ urlSearchResults | def('/') }" 
@@ -20,4 +20,4 @@
 			/>
 		</div>
 	</form>
-	
+<@ end @>

@@ -2,9 +2,7 @@
 
 	<div id="baker-sidebar-modal" class="baker-sidebar uk-modal">
 		<div class="uk-modal-dialog uk-modal-dialog-blank">
-			<div class="uk-margin-bottom">
-				<@ search.php @>
-			</div>
+			<@ search.php @>
 			<div data-baker-nav="@{ url }">
 				<# The navigation gets cloned using JS from the hidden #baker-nav in the footer. #>
 			</div>
