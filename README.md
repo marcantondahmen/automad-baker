@@ -106,5 +106,5 @@ You can add social icons linking to your profiles in navbar by providing profile
 | `Url Facebook` | If an URL to a Facebook page is given, a Facebook icon is added to the navbar | Shared | 
 | `Url Github` | If an URL to a GitHub page is given, a GitHub icon is added to the navbar | Shared | 
 | `Url Instagram` | If an URL to a Instagram page is given, a Instagram icon is added to the navbar | Shared | 
-| `Url Search Results` | The URL of the search results page &mdash; defaults to the homeShared | Shared | 
+| `Url Search Results` | The URL of the search results page &mdash; leave empty to disable searching and hide the search field | Shared | 
 | `Url Twitter` | If an URL to a Twitter page is given, a Twitter icon is added to the navbar | Shared | 
