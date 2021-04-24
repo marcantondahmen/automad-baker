@@ -1,6 +1,6 @@
 <?php defined('AUTOMAD') or die('Direct access not permitted!'); ?>
 		
-		<div class="baker-footer uk-margin-large-top">	
+		<div class="am-block baker-footer uk-margin-large-top">	
 			<# Breadcrumbs. #>
 			<@ breadcrumbs.php @>
 			<div class="uk-margin-bottom uk-margin-top">
