@@ -14,7 +14,7 @@
 		
 		init: function() {
 			
-			var $sidebar = $('#docs-sidebar .docs-sidebar-scroll');
+			var $sidebar = $('#baker-sidebar .baker-sidebar-scroll');
 			
 			// Apply scrollbar plugin.
 			$sidebar.mCustomScrollbar({

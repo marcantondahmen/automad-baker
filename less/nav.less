@@ -13,35 +13,35 @@
 @nav-dropdown-hover-background:	@button-primary-background;
 @nav-dropdown-hover-color:		@button-primary-color;
 
-@docs-nav-padding:				0.48rem;
-@docs-nav-large-padding:		0.52rem;
+@baker-nav-padding:				0.48rem;
+@baker-nav-large-padding:		0.52rem;
 
-@docs-nav-font-size:			1rem;
-@docs-nav-line-height:			@base-body-line-height - @am-border-width;
-@docs-nav-large-font-size: 		1.14rem;
-@docs-nav-large-line-height:	1.95rem;
+@baker-nav-font-size:			1rem;
+@baker-nav-line-height:			@base-body-line-height - @am-border-width;
+@baker-nav-large-font-size: 		1.14rem;
+@baker-nav-large-line-height:	1.95rem;
 
-[data-docs-nav] {
+[data-baker-nav] {
 	padding-bottom: @utility-margin-large;
 }
 
-.docs-nav {
+.baker-nav {
 	
 	margin: 0;
     padding: 0;
 	list-style: none;
-	font-size: @docs-nav-font-size;
-	line-height: @docs-nav-line-height;
+	font-size: @baker-nav-font-size;
+	line-height: @baker-nav-line-height;
 
 	& li {
 		position: relative;
-		margin: 0 0 @am-border-width -@docs-nav-padding;
+		margin: 0 0 @am-border-width -@baker-nav-padding;
 	}
 	
 	& a {
 		
 		display: inline-block;
-		padding: 0 @docs-nav-padding;
+		padding: 0 @baker-nav-padding;
 		color: @am-text;
 		border-radius: @am-radius;
 		
@@ -56,7 +56,7 @@
 	
 	&-breadcrumbs {
 		
-		& li:not(:last-child) a:not(.docs-nav-arrow):not(.docs-nav-loading):after {
+		& li:not(:last-child) a:not(.baker-nav-arrow):not(.baker-nav-loading):after {
 			content: '⁄';
 			padding-left: 0.2rem;
 		}
@@ -107,19 +107,19 @@
 	
 	&-large {
 		
-		font-size: @docs-nav-large-font-size;
-		line-height: @docs-nav-large-line-height;
+		font-size: @baker-nav-large-font-size;
+		line-height: @baker-nav-large-line-height;
 		
 		& > li {
 	
-			margin: 0 0 @am-border-width -@docs-nav-large-padding;
+			margin: 0 0 @am-border-width -@baker-nav-large-padding;
 			
 			& > a {
-				padding: 0 @docs-nav-large-padding;
+				padding: 0 @baker-nav-large-padding;
 			}
 			
-			& > .docs-nav-arrow,
-			& > .docs-nav-loading {
+			& > .baker-nav-arrow,
+			& > .baker-nav-loading {
 				top: 0.07rem;
 			}
 			
@@ -137,19 +137,19 @@
 	
 	@media (max-width: @breakpoint-medium-max) {
 		
-		font-size: @docs-nav-large-font-size;
-		line-height: @docs-nav-large-line-height;
+		font-size: @baker-nav-large-font-size;
+		line-height: @baker-nav-large-line-height;
 		
 		& > li {
 	
-			margin: 0 0 @am-border-width -@docs-nav-large-padding;
+			margin: 0 0 @am-border-width -@baker-nav-large-padding;
 			
 			& > a {
-				padding: 0 @docs-nav-large-padding;
+				padding: 0 @baker-nav-large-padding;
 			}
 			
-			& > .docs-nav-arrow,
-			& > .docs-nav-loading {
+			& > .baker-nav-arrow,
+			& > .baker-nav-loading {
 				top: 0.07rem;
 			}
 			

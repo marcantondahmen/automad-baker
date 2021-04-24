@@ -14,20 +14,20 @@
 		
 		init: function() {
 			
-			var	$navbar = $('.docs-navbar-nav'),
-				$search = $('.docs-navbar-search input');
+			var	$navbar = $('.baker-navbar-nav'),
+				$search = $('.baker-navbar-search input');
 			
 			// Change class of navbar when search field is focused or hovered.	
 			$search
 			.on('focus mouseenter', function() {
-				$navbar.addClass('docs-focus');
+				$navbar.addClass('baker-focus');
 			})
 			.on('blur', function() {
-				$navbar.removeClass('docs-focus');
+				$navbar.removeClass('baker-focus');
 			})
 			.on('mouseleave', function() {
 				if (!$search.is(':focus')) {
-					$navbar.removeClass('docs-focus');
+					$navbar.removeClass('baker-focus');
 				}
 			});
 			

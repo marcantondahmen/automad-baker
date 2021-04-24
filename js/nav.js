@@ -15,7 +15,7 @@
 		init: function() {
 			
 			var $doc = $(document),
-				selectorNav = '#docs-nav > ul';
+				selectorNav = '#baker-nav > ul';
 			
 			// Clone nav into sidebars.
 			$doc.ready(function(){
@@ -23,18 +23,18 @@
 				// First move the nav to the sidebar modal before cloning, 
 				// since the modal exists on every page, also on the home page,
 				// where the sidebar doesn't exist.
-				.appendTo('#docs-sidebar-modal [data-docs-nav]')
+				.appendTo('#baker-sidebar-modal [data-baker-nav]')
 				.clone()
-				.appendTo('#docs-sidebar [data-docs-nav]');
+				.appendTo('#baker-sidebar [data-baker-nav]');
 				// Clean up.
-				$('#docs-nav').remove();
+				$('#baker-nav').remove();
 			});
 			
 			// Get navigation via AJAX.
-			$doc.on('click', '[data-docs-nav-target]', function(e) {
+			$doc.on('click', '[data-baker-nav-target]', function(e) {
 				
 				var	$arrow = $(this),
-					$container = $arrow.closest('[data-docs-nav]'),
+					$container = $arrow.closest('[data-baker-nav]'),
 					current = $container.data('docsNav'),
 					regex = new RegExp(current + "(#[^#]*)?$", 'i'),
 					baseUrl = window.location.pathname.replace(regex, ''),
@@ -47,7 +47,7 @@
 					$arrow.replaceWith(
 						$(
 							'<span></span>', 
-							{ 'class': 'docs-nav-loading' }
+							{ 'class': 'baker-nav-loading' }
 						)
 						.append(
 							$(
@@ -60,14 +60,14 @@
 				
 				$container.load(baseUrl + target + " " + selectorNav, function() {
 					// Set class for active element.
-					$('.docs-nav .uk-active').removeClass('uk-active');
+					$('.baker-nav .uk-active').removeClass('uk-active');
 					$('[href="' + window.location.pathname + '"]').addClass('uk-active');
 					// Set class for active top level element (:currentPath).
-					$('.docs-nav-top .docs-nav-top-active')
-					.removeClass('docs-nav-top-active');
-					$('.docs-nav-top [href="' + baseUrl + target.match(/^\/[\w\-]+/)[0] + '"]')
+					$('.baker-nav-top .baker-nav-top-active')
+					.removeClass('baker-nav-top-active');
+					$('.baker-nav-top [href="' + baseUrl + target.match(/^\/[\w\-]+/)[0] + '"]')
 					.not('.uk-active')
-					.addClass('docs-nav-top-active');
+					.addClass('baker-nav-top-active');
 				});
 				
 			});

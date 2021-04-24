@@ -14,9 +14,9 @@
 
 		init: function () {
 
-			var $container = $('[data-docs-scrolled]');
+			var $container = $('[data-baker-scrolled]');
 
-			// Only check scroll position when needed and the data-docs-scrolled attribute exists.
+			// Only check scroll position when needed and the data-baker-scrolled attribute exists.
 			if ($container.length) {
 
 				var $doc = $(document);
@@ -38,7 +38,7 @@
 				$(window).on('load scrolled.docs', function () {
 
 					var scrolled = $doc.scrollTop(),
-						cls = 'docs-scrolled';
+						cls = 'baker-scrolled';
 
 					if (scrolled > 180) {
 						$container.addClass(cls);

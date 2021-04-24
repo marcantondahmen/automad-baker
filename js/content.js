@@ -14,7 +14,7 @@
 		
 		anchors: function() {
 			
-			$('.docs-content > h2').each(function() {
+			$('.baker-content > h2').each(function() {
 				
 				var	$h = $(this),
 					id = $h.attr('id');

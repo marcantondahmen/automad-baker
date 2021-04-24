@@ -1,9 +1,9 @@
 <?php defined('AUTOMAD') or die('Direct access not permitted!'); ?>
 <div class="uk-margin-top">
 	<@ foreach in pagelist @>
-		<a href="@{ url }" class="docs-preview">
+		<a href="@{ url }" class="baker-preview">
 			<h3>
-				<span class="uk-visible-small docs-preview-parent">
+				<span class="uk-visible-small baker-preview-parent">
 					<@ if @{ :level } > 1 @>
 						<@ with @{ :parent } @>
 							@{ title } &nbsp;⁄
@@ -12,7 +12,7 @@
 					<@ end @>
 				</span>
 				@{ title }
-				<span class="uk-hidden-small docs-preview-parent">
+				<span class="uk-hidden-small baker-preview-parent">
 					<@ if @{ :level } > 1 @>
 						&mdash;
 						<@ with @{ :parent } @>

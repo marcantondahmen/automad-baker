@@ -2,7 +2,7 @@
 <@ navbar.php @>
 <@ title.php @>
 <# Content. #>
-<div class="docs-content">
+<div class="baker-content">
 	@{ +main }	
 </div>
 <# Children nav for small devices. #>
@@ -13,7 +13,7 @@
 		<h2 class="uk-margin-top uk-margin-bottom">
 			More in @{ title }
 		</h2>
-		<ul class="docs-nav docs-nav-large">
+		<ul class="baker-nav baker-nav-large">
 			<@ foreach in pagelist @>
 				<li><a href="@{ url }">@{ title }</a></li>
 			<@ end @>
@@ -28,7 +28,7 @@
 		sort: ':path asc'
 	} @>
 	<@ if @{ :pagelistCount } @>
-		<div class="docs-content">
+		<div class="baker-content">
 			<@ if not @{ checkboxSimpleRelatedPagelist } @>
 				<@ masonry_config.php @>
 				<@ ../blocks/pagelist/masonry.php @>

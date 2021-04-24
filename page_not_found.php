@@ -2,7 +2,7 @@
 <@ elements/header.php @>
 
 		<ul class="uk-grid">
-			<li class="uk-width-1-1 docs-navbar-push">
+			<li class="uk-width-1-1 baker-navbar-push">
 				<@ elements/navbar.php @>
 				<h1>
 					<strong>404</strong> - Page not found

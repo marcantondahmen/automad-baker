@@ -2,7 +2,7 @@
 <@ masonry_config.php @>
 <@ navbar.php @>
 <@ title.php @>
-<div class="docs-content">
+<div class="baker-content">
 	@{ +main }
 	<@ pagelist.php @>
 </div>

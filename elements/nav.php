@@ -3,8 +3,8 @@
 		<@ snippet arrow @>
 			<a
 			href="#"
-			data-docs-nav-target="@{ url }" 
-			class="docs-nav-arrow"
+			data-baker-nav-target="@{ url }" 
+			class="baker-nav-arrow"
 			>
 				<i class="uk-icon-chevron-@{ :arrow }"></i>
 			</a>
@@ -17,7 +17,7 @@
 			else 
 				@><@ 
 				if @{ :level } = 1 and @{ :currentPath }
-					@>class="docs-nav-top-active"<@ 
+					@>class="baker-nav-top-active"<@ 
 				end @><@ 
 			end @>
 			href="@{ url }" 
@@ -29,7 +29,7 @@
 		<# 
 		Top Nav. 
 		#>
-		<ul class="docs-nav docs-nav-top docs-nav-large">
+		<ul class="baker-nav baker-nav-top baker-nav-large">
 			<@ newPagelist { type: 'children' } @>
 			<@ with '/' @>
 				<@ if not @{ hidden } @>
@@ -65,7 +65,7 @@
 			} @>
 		<@ end @>
 		<@ if @{ :pagelistCount } > 2 and @{ :level } > 1 @>
-			<ul class="docs-nav docs-nav-breadcrumbs docs-nav-large uk-margin-bottom">
+			<ul class="baker-nav baker-nav-breadcrumbs baker-nav-large uk-margin-bottom">
 				<@ foreach in pagelist @>
 					<@ if @{ :level } > 0 @>
 						<li>
@@ -89,7 +89,7 @@
 				<@ newPagelist { type: 'siblings', excludeCurrent: false } @>
 			<@ end @>
 			<@ if @{ :pagelistCount } @>
-				<ul class="docs-nav">
+				<ul class="baker-nav">
 					<@ foreach in pagelist @>
 						<# Reset pagelist type to get correct pagelistCount for children for each button. #>
 						<@ newPagelist { type: 'children' } @>	

@@ -1,6 +1,6 @@
 <?php defined('AUTOMAD') or die('Direct access not permitted!'); ?>
 <!DOCTYPE html>
-<html lang="en" class="docs-@{ :template | sanitize }">
+<html lang="en" class="baker-@{ :template | sanitize }">
 <head>
 	<@ set {
 		<# 

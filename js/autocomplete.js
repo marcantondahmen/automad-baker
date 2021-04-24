@@ -13,7 +13,7 @@
 	docs.autocomplete = {
 
 		selectors: {
-			submit: '[data-docs-autocomplete-submit]'
+			submit: '[data-baker-autocomplete-submit]'
 		},
 
 		submitForm: function (e) {

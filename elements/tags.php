@@ -1,7 +1,7 @@
 <?php defined('AUTOMAD') or die('Direct access not permitted!'); ?>
 
 	<@ if @{ tags } @>
-		<div class="docs-buttons-stacked">
+		<div class="baker-buttons-stacked">
 			<@ foreach in tags 
 				@><a 
 				href="@{ urlSearchResults | def('/') }?filter=@{ :tag }" 

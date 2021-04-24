@@ -1,12 +1,12 @@
 <?php defined('AUTOMAD') or die('Direct access not permitted!'); ?>
 
-	<nav class="docs-navbar">
-		<ul class="docs-navbar-nav" data-uk-sticky="{top: 0, media: '(min-height: 450px)'}">	
-			<li class="docs-navbar-brand<@ if @{ :template | match('/sidebar/') } @> uk-hidden-large<@ end @>">
+	<nav class="baker-navbar">
+		<ul class="baker-navbar-nav" data-uk-sticky="{top: 0, media: '(min-height: 450px)'}">	
+			<li class="baker-navbar-brand<@ if @{ :template | match('/sidebar/') } @> uk-hidden-large<@ end @>">
 				<@ logo.php @>
 			</li>
 			<li>
-				<div class="docs-navbar-items">
+				<div class="baker-navbar-items">
 					<# 
 					Expose variable to dashboard
 					@{ checkboxShowInNavbar } 
@@ -16,17 +16,17 @@
 						match: '{ "checkboxShowInNavbar": "/.+/" }'
 					} ~@>
 					<@ foreach in pagelist ~@>
-						<a href="@{ url }" class="docs-navbar-items-button">
+						<a href="@{ url }" class="baker-navbar-items-button">
 							@{ title }
 						</a>	
 					<@~ end @>
 				</div>
 			</li>
-			<li class="docs-navbar-search">
+			<li class="baker-navbar-search">
 				<@ search.php @>
 			</li>
 			<li class="uk-visible-large">
-				<div class="docs-navbar-icons uk-flex">
+				<div class="baker-navbar-icons uk-flex">
 					<@ if @{ urlGithub } @>
 						<a
 						href="@{ urlGithub }"
@@ -71,8 +71,8 @@
 			<@ end @>  
 			>
 				<a 
-				href="#docs-sidebar-modal"
-				class="docs-navbar-toggle" 
+				href="#baker-sidebar-modal"
+				class="baker-navbar-toggle" 
 				data-uk-modal
 				>
 					<span aria-hidden="true"></span>
