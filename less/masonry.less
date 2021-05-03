@@ -39,8 +39,9 @@
 		grid-auto-rows: @cards-masonry-auto-rows;
 	}
 
-	& + & {
-		margin-top: -@cards-margin-vertical - @am-border-width;
+	am-stretched & {
+		margin-top: 0;
+		margin-bottom: -@am-border-width;
 	}
 
 	&.small:not(.single) {
