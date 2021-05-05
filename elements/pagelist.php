@@ -26,7 +26,7 @@
 <@ search_results.php @>
 
 <@ if not @{ checkboxHideFilters } or @{ ?search } @>
-	<div class="baker-buttons-stacked uk-margin-small-top uk-margin-bottom">
+	<div class="am-block baker-buttons-stacked uk-margin-small-top uk-margin-bottom">
 		<@ filters.php @>
 		<@ if @{ ?search } @>
 			<a 
