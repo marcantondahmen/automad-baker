@@ -10,7 +10,7 @@
 				#>
 				<@ newPagelist { 
 					excludeHidden: false,
-					match: '{ "checkboxShowInFooter": "/.+/" }'
+					match: '{ "checkboxShowInFooter": "/[^0]+/" }'
 				} ~@>
 				<@ foreach in pagelist ~@>
 					<a href="@{ url }">

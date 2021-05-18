@@ -13,7 +13,7 @@
 					#>
 					<@ newPagelist { 
 						excludeHidden: false,
-						match: '{ "checkboxShowInNavbar": "/.+/" }'
+						match: '{ "checkboxShowInNavbar": "/[^0]+/" }'
 					} ~@>
 					<@ foreach in pagelist ~@>
 						<a href="@{ url }" class="baker-navbar-items-button">
