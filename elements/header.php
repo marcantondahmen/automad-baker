@@ -2,33 +2,27 @@
 <!DOCTYPE html>
 <html lang="en" class="baker-@{ :template | sanitize }">
 <head>
-	<@ set {
-		<# 
-		The :version var is used globally for cache busting also 
-		in other snippets and templates! 
-		#>
-		:version: '<?php 
-			$Cache = new Automad\Core\Cache();
-			echo $Cache->getSiteMTime();
-		?>',
-		<# Variables used by the MetaTag extension. #>
-		:tagTitle: @{ metaTitle | def("@{ sitename } / @{ title | def('404') }") },
-		:tagDescription: @{ metaDescription | def(@{ +main }) | stripTags }
-	} @>
-	<title>@{ :tagTitle }</title>
-	<@ Automad/MetaTags {
-		description: @{ :tagDescription },
-		ogTitle: @{ :tagTitle },
-		ogDescription: @{ :tagDescription },
-		ogImage: @{ ogImage },
-		twitterCard: 'summary_large_image'
-	} @>
+	<?php if (substr(AM_VERSION, 0, 1) == '1') { ?>
+		<@ set {
+			<# Variables used by the MetaTag extension. #>
+			:tagTitle: @{ metaTitle | def("@{ sitename } / @{ title | def('404') }") },
+			:tagDescription: @{ metaDescription | def(@{ +main }) | stripTags }
+		} @>
+		<title>@{ :tagTitle }</title>
+		<@ Automad/MetaTags {
+			description: @{ :tagDescription },
+			ogTitle: @{ :tagTitle },
+			ogDescription: @{ :tagDescription },
+			ogImage: @{ ogImage },
+			twitterCard: 'summary_large_image'
+		} @>
+	<?php } ?>
 	<@ favicons.php @>
 	<link href="https://fonts.googleapis.com/css?family=Fira+Mono:400,500" rel="stylesheet">
-	<link href="/packages/@{ theme }/dist/libs.min.css?v=@{ :version }" rel="stylesheet">
-	<link href="/packages/@{ theme }/dist/baker.min.css?v=@{ :version }" rel="stylesheet">
-	<script src="/packages/@{ theme }/dist/libs.min.js?v=@{ :version }"></script>
-	<script src="/packages/@{ theme }/dist/baker.min.js?v=@{ :version }"></script>
+	<link href="/packages/@{ theme }/dist/libs.min.css" rel="stylesheet">
+	<link href="/packages/@{ theme }/dist/baker.min.css" rel="stylesheet">
+	<script src="/packages/@{ theme }/dist/libs.min.js"></script>
+	<script src="/packages/@{ theme }/dist/baker.min.js"></script>
 	<script>
 		var autocomplete = <@ autocomplete.php @>;
 	</script>
