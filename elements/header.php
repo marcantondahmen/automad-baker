@@ -1,6 +1,6 @@
 <?php defined('AUTOMAD') or die('Direct access not permitted!'); ?>
 <!DOCTYPE html>
-<html lang="en" class="baker-@{ :template | sanitize }">
+<html lang="en" class="baker-@{ :template | def(@{ template }) | sanitize }">
 <head>
 	<?php if (substr(AM_VERSION, 0, 1) == '1') { ?>
 		<@ set {

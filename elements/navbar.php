@@ -2,7 +2,7 @@
 
 	<nav class="baker-navbar">
 		<ul class="baker-navbar-nav" data-uk-sticky="{top: 0, media: '(min-height: 450px)'}">	
-			<li class="baker-navbar-brand<@ if @{ :template | match('/sidebar/') } @> uk-hidden-large<@ end @>">
+			<li class="baker-navbar-brand<@ if @{ :template | def(@{ template }) | match('/sidebar/') } @> uk-hidden-large<@ end @>">
 				<@ logo.php @>
 			</li>
 			<li class="uk-hidden-small">
@@ -66,7 +66,7 @@
 				</div>
 			</li>
 			<li 
-			<@ if @{ :template | match('/sidebar/') } @>
+			<@ if @{ :template | def(@{ template }) | match('/sidebar/') } @>
 				class="uk-hidden-large"	
 			<@ end @>  
 			>
