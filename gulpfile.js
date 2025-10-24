@@ -63,7 +63,7 @@ gulp.task("libs-js", function () {
 				comments: /(license|copyright)/i,
 			},
 		},
-		pkgUIkit = require("../../../lib/vendor/uikit/uikit/package.json");
+		pkgUIkit = require("./node_modules/uikit/package.json");
 
 	return merge2(
 		// jQuery first.
@@ -79,38 +79,38 @@ gulp.task("libs-js", function () {
 			.src([
 				// Core.
 				// Order of files taken from lib/vendor/uikit/uikit/gulpfile.js
-				"../../../lib/vendor/uikit/uikit/src/js/core/core.js",
-				"../../../lib/vendor/uikit/uikit/src/js/core/touch.js",
-				"../../../lib/vendor/uikit/uikit/src/js/core/utility.js",
-				"../../../lib/vendor/uikit/uikit/src/js/core/smooth-scroll.js",
-				"../../../lib/vendor/uikit/uikit/src/js/core/scrollspy.js",
-				"../../../lib/vendor/uikit/uikit/src/js/core/toggle.js",
-				"../../../lib/vendor/uikit/uikit/src/js/core/alert.js",
-				"../../../lib/vendor/uikit/uikit/src/js/core/button.js",
-				"../../../lib/vendor/uikit/uikit/src/js/core/dropdown.js",
-				"../../../lib/vendor/uikit/uikit/src/js/core/grid.js",
-				"../../../lib/vendor/uikit/uikit/src/js/core/modal.js",
-				"../../../lib/vendor/uikit/uikit/src/js/core/nav.js",
-				"../../../lib/vendor/uikit/uikit/src/js/core/offcanvas.js",
-				"../../../lib/vendor/uikit/uikit/src/js/core/switcher.js",
-				"../../../lib/vendor/uikit/uikit/src/js/core/tab.js",
-				"../../../lib/vendor/uikit/uikit/src/js/core/cover.js",
+				"node_modules/uikit/src/js/core/core.js",
+				"node_modules/uikit/src/js/core/touch.js",
+				"node_modules/uikit/src/js/core/utility.js",
+				"node_modules/uikit/src/js/core/smooth-scroll.js",
+				"node_modules/uikit/src/js/core/scrollspy.js",
+				"node_modules/uikit/src/js/core/toggle.js",
+				"node_modules/uikit/src/js/core/alert.js",
+				"node_modules/uikit/src/js/core/button.js",
+				"node_modules/uikit/src/js/core/dropdown.js",
+				"node_modules/uikit/src/js/core/grid.js",
+				"node_modules/uikit/src/js/core/modal.js",
+				"node_modules/uikit/src/js/core/nav.js",
+				"node_modules/uikit/src/js/core/offcanvas.js",
+				"node_modules/uikit/src/js/core/switcher.js",
+				"node_modules/uikit/src/js/core/tab.js",
+				"node_modules/uikit/src/js/core/cover.js",
 				// Selected components.
-				"../../../lib/vendor/uikit/uikit/src/js/components/autocomplete.js",
-				"../../../lib/vendor/uikit/uikit/src/js/components/pagination.js",
-				"../../../lib/vendor/uikit/uikit/src/js/components/sticky.js",
+				"node_modules/uikit/src/js/components/autocomplete.js",
+				"node_modules/uikit/src/js/components/pagination.js",
+				"node_modules/uikit/src/js/components/sticky.js",
 			])
 			.pipe(uglify(uglifyOptions))
 			.pipe(concat("uikit.js", { newLine: "\r\n\r\n" })) // Doesn't get saved to disk.
 			.pipe(
 				header(
 					"/*! <%= pkg.title %> <%= pkg.version %> | <%= pkg.homepage %> | (c) 2014 YOOtheme | MIT License */\n",
-					{ pkg: pkgUIkit }
-				)
+					{ pkg: pkgUIkit },
+				),
 			),
 		remoteSrc(["packages/standard/js/masonry.js"], {
 			base: "https://raw.githubusercontent.com/marcantondahmen/automad/1.6.4/",
-		}).pipe(uglify(uglifyOptions))
+		}).pipe(uglify(uglifyOptions)),
 	)
 		.pipe(concat("libs.min.js", { newLine: "\r\n\r\n" }))
 		.pipe(gulp.dest("dist"));
@@ -137,9 +137,9 @@ gulp.task("baker-js", function () {
 			],
 			{
 				base: "https://raw.githubusercontent.com/marcantondahmen/automad/1.6.4/",
-			}
+			},
 		),
-		gulp.src(["js/*.js"])
+		gulp.src(["js/*.js"]),
 	)
 		.pipe(uglify(uglifyOptions))
 		.pipe(concat("baker.min.js", { newLine: "\r\n\r\n" }))
@@ -155,5 +155,5 @@ gulp.task("watch", function () {
 // The default task.
 gulp.task(
 	"default",
-	gulp.series("libs-js", "libs-css", "baker-js", "baker-less")
+	gulp.series("libs-js", "libs-css", "baker-js", "baker-less"),
 );

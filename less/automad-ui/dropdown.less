@@ -1,0 +1,60 @@
+/*
+ *                    ....
+ *                  .:   '':.
+ *                  ::::     ':..
+ *                  ::.         ''..
+ *       .:'.. ..':.:::'    . :.   '':.
+ *      :.   ''     ''     '. ::::.. ..:
+ *      ::::.        ..':.. .''':::::  .
+ *      :::::::..    '..::::  :. ::::  :
+ *      ::'':::::::.    ':::.'':.::::  :
+ *      :..   ''::::::....':     ''::  :
+ *      :::::.    ':::::   :     .. '' .
+ *   .''::::::::... ':::.''   ..''  :.''''.
+ *   :..:::'':::::  :::::...:''        :..:
+ *   ::::::. '::::  ::::::::  ..::        .
+ *   ::::::::.::::  ::::::::  :'':.::   .''
+ *   ::: '::::::::.' '':::::  :.' '':  :
+ *   :::   :::::::::..' ::::  ::...'   .
+ *   :::  .::::::::::   ::::  ::::  .:'
+ *    '::'  '':::::::   ::::  : ::  :
+ *              '::::   ::::  :''  .:
+ *               ::::   ::::    ..''
+ *               :::: ..:::: .:''
+ *                 ''''  '''''
+ * 
+ *
+ * AUTOMAD
+ *
+ * Copyright (c) 2016-2021 by Marc Anton Dahmen
+ * https://marcdahmen.de
+ *
+ * Licensed under the MIT license.
+ */
+
+@dropdown-z-index: 970;
+@dropdown-width: 100%;
+@dropdown-margin-top: 0.36rem;
+@dropdown-padding: 0;
+@dropdown-background: @am-bg;
+@dropdown-color: @am-text;
+@dropdown-font-size: 1rem;
+@dropdown-animation: uk-fade;
+
+@dropdown-small-padding: @dropdown-padding;
+
+@dropdown-scrollable-height: 14.29rem;
+
+.hook-dropdown() {
+	box-sizing: border-box;
+	margin-top: @dropdown-margin-top;
+	overflow: hidden;
+	border-radius: @am-radius;
+	border: @am-hairline-px;
+	.shadow;
+
+	&:not(.uk-datepicker) {
+		min-width: 100%;
+		width: auto;
+	}
+}

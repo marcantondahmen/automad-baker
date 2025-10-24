@@ -9,19 +9,21 @@
  *  based on UIkit 2
  */
 
+@breakpoint-small: 480px;
+@breakpoint-medium: 768px;
+@breakpoint-large: 1170px;
+@breakpoint-xlarge: 1350px;
 
-@breakpoint-small:      480px;
-@breakpoint-medium:     768px;
-@breakpoint-large:      1170px;
-@breakpoint-xlarge:     1350px;
-
-@breakpoint-mini-max:   (@breakpoint-small - 1);
-@breakpoint-small-max:  (@breakpoint-medium - 1);
+@breakpoint-mini-max: (@breakpoint-small - 1);
+@breakpoint-small-max: (@breakpoint-medium - 1);
 @breakpoint-medium-max: (@breakpoint-large - 1);
-@breakpoint-large-max:  (@breakpoint-xlarge - 1);
-
+@breakpoint-large-max: (@breakpoint-xlarge - 1);
 
 :root {
+	// Base
+	--am-border-color: rgba(128, 128, 128, 0.2);
+	--am-border-radius: 5px;
+	--am-border-width: 1px;
 
 	// Container
 	--am-block-max-width: @block-max-width;
@@ -38,12 +40,11 @@
 	--am-gallery-z-index: 9999;
 	--am-gallery-max-height: 100%;
 	--am-gallery-max-width: 100%;
-	--am-gallery-background: #FFFFFF;
+	--am-gallery-background: #ffffff;
 	--am-gallery-controls-color: @base-body-color;
-	--am-gallery-controls-background: rgba(255,255,255,0.3);
+	--am-gallery-controls-background: rgba(255, 255, 255, 0.3);
 
 	// Slider
 	--am-slider-controls-color: var(--am-gallery-controls-color);
 	--am-slider-controls-background: var(--am-gallery-controls-background);
-
 }

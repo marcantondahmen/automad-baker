@@ -9,8 +9,8 @@
  *  based on UIkit 2
  */
 
-@uikit: "../../../lib/vendor/uikit/uikit/src/less";
-@am-gui: "../../../automad/ui/less";
+@uikit: "../node_modules/uikit/src/less";
+@am-gui: "./automad-ui";
 
 // Defaults for undefined variables.
 @am-md-content-padding: 0;
@@ -26,10 +26,8 @@
 @import "@{am-gui}/base.less";
 @import "@{am-gui}/button.less";
 @import "@{am-gui}/dropdown.less";
-@import "@{am-gui}/fonts.less";
 @import "@{am-gui}/form.less";
 @import "@{am-gui}/icon.less";
-@import "@{am-gui}/logo.less";
 @import "@{am-gui}/mixins.less";
 @import "@{am-gui}/modal.less";
 @import "@{am-gui}/nav.less";

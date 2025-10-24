@@ -9,11 +9,10 @@
  *  based on UIkit 2
  */
 
+@breadcrumb-font-size: 1rem;
 
-@breadcrumb-font-size:  		1rem;
-
-@breadcrumb-divider:            '⁄';
-@breadcrumb-divider-margin:     0.57rem;
+@breadcrumb-divider: "⁄";
+@breadcrumb-divider-margin: 0.57rem;
 
 .hook-breadcrumb() {
 	max-width: 100%;
@@ -21,8 +20,10 @@
 	white-space: nowrap;
 	padding-bottom: 0.72rem;
 	margin-bottom: -0.72rem;
+	padding-left: 0 !important;
 }
 
 .hook-breadcrumb-divider() {
 	color: @am-border-color;
 }
+
