@@ -1,6 +1,6 @@
 # Baker
 
-An elegant documentation and blogging theme for [Automad](https://automad.org) based on the official Automad documentation theme.
+An elegant documentation and blogging theme for [Automad](https://automad.org) based on the official Automad documentation theme. Check out a live preview [here](https://baker.dev.automad.org).
 
 ![](https://raw.githubusercontent.com/marcantondahmen/media-files/master/themes/baker/post-sidebar-masonry.png)
 
